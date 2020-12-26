@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
+import "./ApplyPage.css";
 init("user_uMXc9IqogkmJxBWK1YG5N");
 
 const ApplyPage = () => {
@@ -84,7 +85,7 @@ const ApplyPage = () => {
 
                 <label>Which of our properties are you applying for?</label>
                 <select
-                  name="property_application"
+                  name="property-application"
                   placeholder="Choose..."
                   required
                 >
@@ -157,61 +158,68 @@ const ApplyPage = () => {
                 <label>Monthly Income </label>
                 <input type="text" name="monthly-salary" required />
 
-                <label>Start Date </label>
+                <label>When did you start working here? </label>
                 <input type="date" name="occupation-start-date" required />
+
+                <label>Do you have another job you would like to include? </label>
+                <textarea
+                  rows="7"
+                  name="second-job"
+                  placeholder="Please list the employer name, address, number, and start date"
+                />
 
                 <h3>QUESTIONNAIRE</h3>
                 <div>Please answer Yes or No to the questions below:</div>
                 <ul>
                   <li>
                     Will any waterbeds or water-filled furniture be on the
-                    Property? <input type="text" />
+                    Property? <input type="text" name="waterbeds"/>
                   </li>
                   <li>
                     Does anyone who will occupy the Property smoke?{" "}
-                    <input type="text" />
+                    <input type="text" name="smoker"/>
                   </li>
                   <li>
                     Will Applicant maintain renter’s insurance?{" "}
-                    <input type="text" />
+                    <input type="text" name="renters-insurance"/>
                   </li>
                   <li>
-                    Has applicant ever been evicted? <input type="text" />
+                    Has applicant ever been evicted? <input type="text" name="eviction"/>
                   </li>
                   <li>
                     Has applicant ever been asked to move out by landlord?{" "}
-                    <input type="text" />
+                    <input type="text" name="move-out-landlord" />
                   </li>
                   <li>
                     Has applicant breached a lease or rental agreement?{" "}
-                    <input type="text" />
+                    <input type="text" name="breached-lease-agreement" />
                   </li>
                   <li>
                     Has applicant ever filed for bankruptcy?{" "}
-                    <input type="text" />
+                    <input type="text" name="bankruptcy"/>
                   </li>
                   <li>
                     Has applicant ever lost a property in foreclosure?{" "}
-                    <input type="text" />
+                    <input type="text" name="foreclosure"/>
                   </li>
                   <li>
                     Has applicant ever had any credit problems, including any
                     outstanding debt (e.g., student loans or medical bills),
-                    slow-pays or delinquencies? <input type="text" />
+                    slow-pays or delinquencies? <input type="text" name="credit-problems"/>
                   </li>
                   <li>
                     Has applicant ever been convicted of a crime? If yes,
                     provide the location, year, and type of conviction.{" "}
-                    <input type="text" />
+                    <input type="text" name="crime" />
                   </li>
                   <li>
                     Is any occupant a registered sex offender? If yes, provide
                     the location, year, and type of conviction.{" "}
-                    <input type="text" />
+                    <input type="text" name="sex-offender"/>
                   </li>
                   <li>
                     Is there additional information Applicant wants considered?{" "}
-                    <input type="text" />
+                    <input type="text" name="other-information"/>
                   </li>
                 </ul>
 
@@ -225,7 +233,7 @@ const ApplyPage = () => {
                 />
 
                 <h3>AUTHORIZATION</h3>
-
+                <p>Please check the boxes below to authorize the following:</p>
                 <label for="credit-check-acknowledgement">
                   Applicant authorizes Landlord and Landlord’s agent, at any
                   time before, during, or after any tenancy, to: (1) obtain a
@@ -244,7 +252,7 @@ const ApplyPage = () => {
                   required
                 />
 
-                <label for="reference-check-acknowledgement">
+                <label for="notice-acknowledgement">
                   Notice of Landlord’s Right to Continue to Show the Property:
                   Unless Landlord and Applicant enter into a separate written
                   agreement otherwise, the Property remains on the market until
@@ -254,7 +262,7 @@ const ApplyPage = () => {
                 </label>
                 <input
                   type="checkbox"
-                  name="reference-check-acknowledgement"
+                  name="notice-acknowledgement"
                   value="By checking this box, I acknowledge the notice."
                   required
                 />
@@ -271,17 +279,19 @@ const ApplyPage = () => {
                   required
                 />
                 <hr></hr>
-                <p id="app-fee">APPLICATION FEE: $50</p>
+                <p id="app-fee">
+                  <strong>APPLICATION FEE: $50</strong>
+                </p>
                 <p id="instruction">
                   After submitting your application, you will be redirected to
                   our payments page to pay the non-refundable application fee.
-                  We can not process your application if the application fee is
-                  not paid.
-                  <br></br>
-                  Thank you again for your interest in our property. We will be
-                  in touch soon.
+                  <br />
                 </p>
-                <br></br>
+                <p>
+                  Thank you for applying. We will reach out to you
+                  within 24 hours.
+                </p>
+                
                 <input className="submit_button" type="submit" value="SUBMIT" />
                 <br></br>
                 <br></br>

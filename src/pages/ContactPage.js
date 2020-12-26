@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import "./ContactPage.css";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 init("user_uMXc9IqogkmJxBWK1YG5N");

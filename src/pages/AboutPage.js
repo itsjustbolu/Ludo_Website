@@ -2,10 +2,11 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
+import './AboutPage.css'
 
 function AboutPage() {
   return (
-    <div>
+    <div className="about_container">
       <Container>
         <Row>
           <Col>
